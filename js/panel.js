@@ -16,5 +16,26 @@ google.maps.event.addDomListener(window, 'load', function() {
 
   new storeLocator.Panel(panelDiv, {
     view: view,
+    locationSearchLabel: "Wo befinden Sie sich?"
   });
+
+  storeLocator.Panel.prototype.selectedStore_changed = function() {
+    $('.highlighted', this.storeList_).removeClass('highlighted');
+
+    var that = this;
+    var store = this.get('selectedStore');
+    if (!store) {
+      return;
+    }
+    this.directionsTo_ = store;
+    this.storeList_.find('#store-' + store.getId()).addClass('highlighted');
+
+    if (this.settings_['directions']) {
+      this.directionsPanel_.find('.directions-to')
+        .val(store.getDetails().title);
+    }
+
+    var node = that.get('view').getInfoWindow().getContent();
+  };
+
 });

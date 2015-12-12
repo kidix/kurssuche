@@ -23,7 +23,7 @@
 
 .storelocator-panel .store-list li.highlighted,
 .storelocator-panel .store-list li.highlighted:hover {
-  background: #ccf;
+  background: #fdede7;
 }
 
 .storelocator-panel .directions {
@@ -93,11 +93,22 @@
 }
 
 .store .web a {
-  color: orange;
+  color: #f1592a;
 }
 
 .store .action {
   font-size: 0.8em;
   color: orange;
   margin-right: 0.5em;
+}
+
+#map-canvas .store .title,
+#map-canvas .store .address,
+#map-canvas .store .phone,
+#map-canvas .store .web,
+#map-canvas .store .misc {
+  font-size:14px;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  display: block;
 }
