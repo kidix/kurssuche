@@ -38,4 +38,11 @@ google.maps.event.addDomListener(window, 'load', function() {
     var node = that.get('view').getInfoWindow().getContent();
   };
 
+  storeLocator.Panel.NO_STORES_HTML_ = '<li class="no-stores">Es befinden' +
+      ' sich keine Kursangebote in der N&auml;he</li>';
+
+  storeLocator.Panel.NO_STORES_IN_VIEW_HTML_ = '<li class="no-stores">Es befinden' +
+      ' sich keine Kursangebote in der N&auml;he. Die n&auml;chsten Kurse sind'+
+      ' unten aufgelistet.</li>';
+
 });
