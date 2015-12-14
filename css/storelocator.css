@@ -1,3 +1,9 @@
+body { font-family: sans-serif; }
+#map-canvas, #panel { height: 500px; }
+#panel { width: 300px; float: left; margin-right: 10px; }
+#panel .feature-filter label { width: 130px; }
+p.attribution, p.attribution a { color: #666; }
+
 .storelocator-panel {
   border: 1px solid #ccc;
   overflow: auto;
@@ -111,4 +117,17 @@
   margin-top: 0.2em;
   margin-bottom: 0.5em;
   display: block;
+}
+
+@media screen and (max-width:720px) {
+  .storelocator-panel {
+    float:none;
+    margin-bottom: 30px;
+  }
+  #map-canvas{
+    width:300px;
+  }
+  #map-canvas, #panel{
+    height: 300px;
+  }
 }
